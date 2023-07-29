@@ -11,6 +11,9 @@ root.geometry('1200x650')
 root.resizable(True,True)
 root.configure(background='black')
 
+img=PhotoImage(file=r"diabetes predictor\diabetesPre.png")
+Label(root,image=img,bg='white').place(x=0,y=0)
+
 df=pd.read_csv('F:\codes\diabetes predictor\diabetes.csv')
 df['Glucose']=df['Glucose'].replace(0,df['Glucose'].median())
 df['BloodPressure']=df['BloodPressure'].replace(0,df['BloodPressure'].median())
